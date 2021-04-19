@@ -26,7 +26,7 @@ phoneNumbers.forEach(function(numbers) {
         // Console log the message SID to verify the SMS has been sent
         .then ((message) => console.log(message.sid))
         // Error handling: if there is an error, catch the error and console log the error code
-        .catch((err) => console.log(err));
+        .catch(console.error);
 });
 
 
