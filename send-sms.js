@@ -12,4 +12,5 @@ client.messages.create({
     from: process.env.TWILIO_NUMBER,
     body: 'Hello there! This is Potato.'
 })
-.then ((message) => console.log(message.sid));
+.then ((message) => console.log(message.sid))
+.catch((err) => console.log(err));
