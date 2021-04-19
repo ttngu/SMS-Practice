@@ -9,7 +9,7 @@ const client = require('twilio')(accountSid,authToken);
 
 client.messages.create({
     to: process.env.MY_PHONENUMBER,
-    from: '+14153607114',
+    from: process.env.TWILIO_NUMBER,
     body: 'Hello there! This is Potato.'
 })
 .then ((message) => console.log(message.sid));
