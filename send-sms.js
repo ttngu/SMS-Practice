@@ -15,7 +15,7 @@ phoneNumbers.forEach(function(numbers) {
     // Check that loop works properly by console logging
     console.log(numbers)
 
-    // Send SMS
+    // Send SMS - Instantiating Twilio client to create and send messages
     client.messages
         // Create the message, taking to and from phone numbers, and body of SMS 
         .create({
