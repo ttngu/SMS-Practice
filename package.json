@@ -1,0 +1,23 @@
+{
+  "name": "sms-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send-sms.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttngu/SMS-Practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttngu/SMS-Practice/issues"
+  },
+  "homepage": "https://github.com/ttngu/SMS-Practice#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twilio": "^3.60.0"
+  }
+}
