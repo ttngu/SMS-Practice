@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// console.log(accountSid);
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 
 // Create Twilio REST Client
