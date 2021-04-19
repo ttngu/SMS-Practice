@@ -10,16 +10,22 @@ const client = require('twilio')(accountSid,authToken)
 // Array of phone numbers
 const phoneNumbers = ["111-222-3333", "222-333-4444", "333-444-5555", "123-456-7890", "987-654-3210"];
 
+// Create a for each loop
 phoneNumbers.forEach(function(numbers) {
+    // Check that loop works properly by console logging
     console.log(numbers)
 
+    // Send SMS
     client.messages
+        // Create the message, taking to and from phone numbers, and body of SMS 
         .create({
             to: '+1' + numbers,
             from: process.env.TWILIO_NUMBER,
             body: 'Do you prefer fries or tots?'
         })
+        // Console log the message SID to verify the SMS has been sent
         .then ((message) => console.log(message.sid))
+        // Error handling: if there is an error, catch the error and console log the error code
         .catch((err) => console.log(err));
 });
 
