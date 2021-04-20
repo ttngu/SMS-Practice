@@ -1,7 +1,6 @@
+// Instantiate the Client and requirements 
 const twilio = require('twilio');
-
 require('dotenv').config()
-
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 // Create Twilio REST Client
@@ -25,7 +24,7 @@ phoneNumbers.forEach(function(numbers) {
         })
         // Console log the message SID to verify the SMS has been sent
         .then ((message) => console.log(message.sid))
-        // Error handling: if there is an error, catch the error and console log the error code
+        // Error handling: if there is an error, catch the error and console the error code in the terminal
         .catch(console.error);
 });
 
